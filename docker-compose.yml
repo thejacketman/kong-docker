@@ -40,7 +40,7 @@ services:
     ports:
       - 80:8000
       - 443:8443 
-      - 127.0.0.1:8001:8001
+      - 8001:8001
     healthcheck:
       test: ["CMD", "kong", "health"]
       interval: 5s
@@ -58,6 +58,6 @@ services:
       # But the default `sails-disk` adapter is not designed for use as a production database;
       - NODE_ENV=development
     ports:
-      - 127.0.0.1:1337:1337
+      - 1337:1337
     volumes:
       - ./konga_data:/app/kongadata
