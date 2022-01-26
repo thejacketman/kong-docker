@@ -36,12 +36,15 @@ do
     sleep 5
 done
 
+sleep 10
 
 echo "Running database migrations..."
 
 sudo docker-compose run --rm kong kong migrations bootstrap --vv
 
 echo "Starting kong..."
+
+sleep 10
 
 sudo docker-compose up -d kong
 
