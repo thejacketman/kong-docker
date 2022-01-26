@@ -20,7 +20,7 @@ sudo cp default.env .env
 
 sudo apt install python3-pip -y
 
-sudo pip3 install docker-compose -y
+sudo pip3 install docker-compose
 
 
 echo "Starting kong-database..."
