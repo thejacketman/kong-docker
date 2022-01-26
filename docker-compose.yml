@@ -38,9 +38,9 @@ services:
       - KONG_TRUSTED_IPS=0.0.0.0/0,::/0
       - KONG_REAL_IP_RECURSIVE=on
     ports:
-      - 8000:8000
+      - 80:8000
       - 443:8443 
-      - 8001:8001
+      - 127.0.0.1:8001:8001
     healthcheck:
       test: ["CMD", "kong", "health"]
       interval: 5s
@@ -58,6 +58,6 @@ services:
       # But the default `sails-disk` adapter is not designed for use as a production database;
       - NODE_ENV=development
     ports:
-      - 1337:1337
+      - 127.0.0.1:1337:1337
     volumes:
       - ./konga_data:/app/kongadata
