@@ -3,7 +3,7 @@ echo "Starting Update apt and install htop and jq..."
 
 sudo apt-get update
 
-sudo apt install htop
+sudo apt install htop -y
 
 sudo apt install jq
 
@@ -12,20 +12,20 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 
 sudo sh get-docker.sh
 
-sudo apt install docker-compose
+sudo apt install docker-compose -y
 
 echo "Starting install env | py ..."
 
 sudo cp default.env .env
 
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 
-sudo pip3 install docker-compose
+sudo pip3 install docker-compose -y
 
 
 echo "Starting kong-database..."
 
-docker-compose up -d kong-database
+sudo docker-compose up -d kong-database
 
 STATUS="starting"
 
@@ -39,15 +39,15 @@ done
 
 echo "Running database migrations..."
 
-docker-compose run --rm kong kong migrations bootstrap --vv
+sudo docker-compose run --rm kong kong migrations bootstrap --vv
 
 echo "Starting kong..."
 
-docker-compose up -d kong
+sudo docker-compose up -d kong
 
 echo "Kong admin running http://127.0.0.1:8001/"
 echo "Kong proxy running http://127.0.0.1/"
 
 echo "Starting konga..."
-docker-compose up -d konga
+sudo docker-compose up -d konga
 echo "Konga running http://127.0.0.1:1337/"
