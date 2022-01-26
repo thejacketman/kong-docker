@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Starting Update apt and install htop and jq..."
 
-sudo apt-get update
+sudo apt-get update -y
 
 sudo apt install htop -y
 
-sudo apt install jq
+sudo apt install jq -y
 
 echo "Starting install docker... and compose .."
 curl -fsSL https://get.docker.com -o get-docker.sh
