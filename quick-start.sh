@@ -1,4 +1,27 @@
 #!/bin/bash
+echo "Starting Update apt and install htop and jq..."
+
+sudo apt-get update
+
+sudo apt install htop
+
+sudo apt install jq
+
+echo "Starting install docker... and compose .."
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sudo sh get-docker.sh
+
+sudo apt install docker-compose
+
+echo "Starting install env | py ..."
+
+sudo cp default.env .env
+
+sudo apt install python3-pip
+
+sudo pip3 install docker-compose
+
 
 echo "Starting kong-database..."
 
