@@ -36,7 +36,7 @@ do
     sleep 5
 done
 
-sleep 10
+sleep 5
 
 echo "Running database migrations..."
 
@@ -44,7 +44,7 @@ sudo docker-compose run --rm kong kong migrations bootstrap --vv
 
 echo "Starting kong..."
 
-sleep 10
+sleep 5
 
 sudo docker-compose up -d kong
 
@@ -54,3 +54,5 @@ echo "Kong proxy running http://127.0.0.1/"
 echo "Starting konga..."
 sudo docker-compose up -d konga
 echo "Konga running http://127.0.0.1:1337/"
+
+sudo time ./serviceandroute.sh
