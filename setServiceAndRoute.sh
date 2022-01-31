@@ -1,3 +1,4 @@
+        #!/bin/bash
         echo "Starting Create Service and Routes ..."
         curl 127.0.0.1:8001/services -d 'name=login' -d 'url=http://54.254.38.220/api/auth/login'
         curl 127.0.0.1:8001/services/login/routes -d 'paths[]=/auth/login'
