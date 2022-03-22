@@ -12,7 +12,7 @@ services:
         expose:
             - "9090"
         ports:
-            - 127.0.0.1:9090:9090
+            - 9090:9090
         restart: always
 
     node_exporter:
@@ -21,7 +21,7 @@ services:
         expose:
             - "9100"
         ports:
-            - 127.0.0.1:9100:9100
+            - 9100:9100
         restart: always
 
 volumes:
