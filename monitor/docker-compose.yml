@@ -29,7 +29,6 @@ services:
         - prometheus
       environment:
         GF_INSTALL_PLUGINS: grafana-clock-panel, grafana-simple-json-datasource
-        LETSENCRYPT_HOST: grafana.lab20.cpsudevops.com 
         networks: 
             - monitoring
 
