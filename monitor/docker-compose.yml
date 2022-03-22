@@ -9,8 +9,6 @@ services:
         - prometheus_data:/promtheus
         command:
             - '--config.file=/etc/prometheus/prometheus.yml'
-        expose:
-            - "9090"
         ports:
             - 9090:9090
         restart: always
@@ -18,8 +16,6 @@ services:
     node_exporter:
         image: prom/node-exporter:latest
         container_name: node_exporter
-        expose:
-            - "9100"
         ports:
             - 9100:9100
         restart: always
