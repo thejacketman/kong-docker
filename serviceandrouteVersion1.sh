@@ -110,6 +110,6 @@ curl 127.0.0.1:8001/services -d 'tags=v1' -d 'name=dlt' -d 'url=http://10.19.12.
 curl 127.0.0.1:8001/services/dlt/routes -d 'paths[]=/api/v1/dlt/'
 sleep 2
 
-curl 127.0.0.1:8001/services -d 'tags=v1' -d 'name=permission' -d 'url=http://10.19.12.141/api/v1/permission'
+curl 127.0.0.1:8001/services -d 'tags=v1' -d 'name=permission' -d 'url=http://10.19.12.141/api/v1/permission/'
 curl 127.0.0.1:8001/services/permission/routes -d 'paths[]=/api/v1/permission/'
 sleep 2
