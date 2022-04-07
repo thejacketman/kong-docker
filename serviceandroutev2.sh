@@ -109,3 +109,7 @@ sleep 2
 curl 127.0.0.1:8001/services -d 'name=dlt' -d 'url=http://10.19.12.141/api/dlt/'
 curl 127.0.0.1:8001/services/dlt/routes -d 'paths[]=/api/dlt/'
 sleep 2
+
+curl 127.0.0.1:8001/services -d 'name=permission' -d 'url=http://10.19.12.141/api/permission'
+curl 127.0.0.1:8001/services/permission/routes -d 'paths[]=/api/permission/'
+sleep 2
