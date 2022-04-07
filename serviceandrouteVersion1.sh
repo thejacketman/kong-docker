@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Starting Create Service and Routes ..."
+echo "Starting Create Service and Routes Version v1 ..."
 echo " > > > Starting Create Service and Routes login ..."
 
 curl 127.0.0.1:8001/services -d 'tags=v1' -d 'name=Announcement' -d 'url=http://10.19.12.141/api/v1/Announcement'
