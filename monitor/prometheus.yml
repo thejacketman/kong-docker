@@ -18,7 +18,7 @@ scrape_configs:
         - targets: 
             - "kong:8001"
 
-    - job_name: servMqttPrd52
+    - job_name: ServMqttPrd52
       static_configs:
         - targets: 
             - "10.19.12.52:9100"
