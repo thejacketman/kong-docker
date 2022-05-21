@@ -22,3 +22,8 @@ scrape_configs:
       static_configs:
         - targets: 
             - "10.19.12.52:9100"
+
+    - job_name: ServMqttPrd52
+      static_configs:
+        - targets: 
+            - "10.19.12.52:9100"
