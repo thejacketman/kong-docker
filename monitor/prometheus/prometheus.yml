@@ -71,3 +71,9 @@ scrape_configs:
           - 10.19.12.55:9100
           - 10.19.12.56:9100
           - 10.19.12.57:9100
+  - job_name: PRD_iTraffic_MongoDB_ALL
+    static_configs:
+      - targets:
+          - 10.19.12.58:9100
+          - 10.19.12.59:9100
+          - 10.19.12.60:9100
